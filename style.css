@@ -1,0 +1,78 @@
+* {
+    font-family: Roboto, sans-serif; /* FONT */
+}
+h1 {
+    margin: 1.5em;
+    border: 5px double black;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    text-align: center;
+    outline: 5px solid gold;
+    outline-offset: -10px;
+    width: 40%;
+
+}
+input, button {
+    font: inherit;
+}
+.contact {
+    margin: 2rem auto;
+    background-color: blanchedalmond;
+    padding: 5rem;
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    border-radius: 250px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+}
+h1, h2 {
+    color:red
+}
+p {
+    color: blue;
+    font-size: 22px;
+    line-height: 1.5;
+}
+body {
+    font-size: 22px;
+    background-color: #96CDFF;
+}
+.highlight {
+    background-color: yellow;
+}
+.purp {
+    color: purple;
+}
+a { /* Link styles */
+    color: purple;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    text-decoration: underline;
+}
+a:visited {
+    color: purple;
+}
+li a {
+    display: block;
+}
+#inc-btn {
+    background-color: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ul ::marker {
+    color: green;
+    font-weight: bold;
+    font-size : .5em;
+    content: "About Me: ";
+}
