@@ -6,7 +6,9 @@ function Navbar() {
     <>      
     <nav className = "navbar">
         <div className = "navbar-container">
-        {/* Logo removed */}
+        <Link to="/" className="navbar-logo">
+        My Projects <i className = 'fab fa-typo3' />  
+        </Link>
         </div>
     </nav>
     </>
