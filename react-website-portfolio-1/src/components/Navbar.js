@@ -1,24 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
   return (
     <>      
     <nav className = "navbar">
         <div className = "navbar-container">
-        <Link to="/" className="navbar-logo">
-        My Projects <i className = 'fab fa-typo3' />  
-        </Link>
+        {/* Logo removed */}
         </div>
-      </nav>
+    </nav>
     </>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
