@@ -21,7 +21,28 @@
   padding: 0 50px;
 }
 
-/* Logo styles removed */
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
 
 .nav-menu {
   display: grid;
@@ -107,6 +128,13 @@
   .nav-links:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
   }
 
   .menu-icon {
