@@ -54,7 +54,7 @@ body {
 .content-container {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(227, 83, 83, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   margin: 20px;
