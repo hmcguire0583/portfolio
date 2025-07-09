@@ -64,7 +64,9 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          <div className='shadow-lg shadow-teal-300 rounded-lg bg-transparent'>
           {button && <Button buttonStyle ='btn--outline'>Contact</Button>}
+          </div>
         </div>
     </nav>
     </>
