@@ -48,7 +48,7 @@ export default function Home() {
           Hi, I'm Harry McGuire, I have a passion for Object-Oriented Programming and I love creating dynamic web applications.
         </p>
       </div>
-      <div className="flex-1 flex justify-center md:justify-end">
+      <div className="flex-1 flex justify-center">
         <div className="relative w-64 h-64 md:w-96 md:h-96">
           <div className="shadow-xl absolute w-24 h-24 bg-blue-200 rounded-full shadow-blue-400 -left-8 -top-8"></div>
           <div className="shadow-xl absolute right-0 -bottom-8 w-40 h-40 bg-blue-500 rounded-full shadow-blue-400"></div>
