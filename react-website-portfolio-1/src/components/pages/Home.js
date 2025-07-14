@@ -39,9 +39,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 ">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4">
       <div className="flex-1 flex flex-col items-center md:items-start mb-10 md:mb-0">
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-300 mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 from-teal-300 to-blue-500 bg-gradient-to-r bg-clip-text text-transparent">
           <span ref={typedEl}></span>
         </h1>
         <p id="text" className="text-lg md:text-xl text-blue-100 max-w-md text-center md:text-left">
