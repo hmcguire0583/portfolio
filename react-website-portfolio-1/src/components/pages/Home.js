@@ -1,32 +1,33 @@
 import React, { useEffect, useRef } from 'react';
+import SplitText from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import '../../App.css';
 import Typed from 'typed.js';
 import myImage from '../../images/IMG_2825.jpeg'; 
 
+gsap.registerPlugin(SplitText);
 const GsapText = () => {
-  useGSAP(() => {
-    gsap.to("#text", {
-      ease: "power1.inOut",
-      opacity: 1,
-      y: 0
-    })
-    gsap.fromTo('.para', {
-      opacity: 0,
-      y: 20,
-    }, {
-      opacity: 1,
-      y: 0, 
-      delay: 1,
-      stagger: 0.1
-    })
-  }, [])
+  gsap.set(".split" , { opacity: 1});
+  let split = SplitText.create("#text", { 
+    type: "words, lines, chars",
+    wordsClass: "word",
+    linesClass: "line",
+    charsClass: "char",
+    autoSplit: true
+  });
+  gsap.from(split.lines, {
+    delay: 1,
+    duration: 1,
+    y: 100,
+    autoAlpha: 0,
+    stagger: 0.05
+  });
 }
-
 export default function Home() {
   const typedEl = useRef();
   useEffect(() => {
+    GsapText();
     const typed = new Typed(typedEl.current, {
       strings: ['Welcome to my website!', 'I am a fullstack-developer', 'I have a passion for OOP', ' '],
       typeSpeed: 50,
