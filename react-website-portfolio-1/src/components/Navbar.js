@@ -9,7 +9,12 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const [darkMode, setDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {
+  setDarkMode(prevMode => !prevMode);
+  document.documentElement.classList.toggle('dark');
+};
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -31,15 +36,15 @@ function Navbar() {
     <>      
     <nav className = "navbar">
         <div className = "navbar-container">
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-        Harry McGuire <i className = 'fab fa-typo3' />  
-        </Link>
+        <div className="navbar-logo" onClick={toggleDarkMode}>
+        HMC <i className='fab fa-typo3' />  
+        </div>
         <div className = 'menu-icon' onClick={handleClick}>
           <i className = {click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className = {click ? 'nav-menu active' : 'nav-menu'}> 
             <li className = 'nav-item'>
-              <Link to="/home" className = 'nav-links' onClick={closeMobileMenu}>
+              <Link to="/" className = 'nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
@@ -64,7 +69,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          <div className='shadow-lg shadow-teal-300 rounded-lg bg-transparent'>
+          <div className='shadow-lg shadow-teal-300 dark:shadow-red-500 rounded-xl bg-transparent'>
           {button && <Button buttonStyle ='btn--outline'>Contact</Button>}
           </div>
         </div>

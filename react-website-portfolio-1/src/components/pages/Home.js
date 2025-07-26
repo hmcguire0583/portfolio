@@ -1,56 +1,76 @@
 import React, { useEffect, useRef } from 'react';
+import SplitText from "gsap/SplitText";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import '../../App.css';
+import Typed from 'typed.js';
+import myImage from '../../images/IMG_2825.jpeg'; 
 
-/**
- * This component serves as the landing page for the portfolio website.
- */
+gsap.registerPlugin(SplitText);
+const GsapText = () => {
+  gsap.set(".split" , { opacity: 1});
+  let split = SplitText.create("#text", { 
+    type: "words, lines, chars",
+    wordsClass: "word",
+    linesClass: "line",
+    charsClass: "char",
+    autoSplit: true
+  });
+  gsap.from(split.lines, {
+    delay: 1,
+    duration: 1,
+    y: 100,
+    autoAlpha: 0,
+    stagger: 0.05
+  });
+}
+const GsapMove = () => {
+    gsap.to(".circle1", {
+    duration: 2,
+    y: 350,
+    x: -50,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true
+  });
+}
+
 export default function Home() {
-  const typewriterRef = useRef(null);
-
+  const typedEl = useRef();
   useEffect(() => {
-    const words = ["I am a full-stack developer", "Welcome to my website!", "I am motivated"];
-    let i = 0;
-    let j = 0;
-    let currentWord = "";
-    let isDeleting = false;
-    let timeoutId;
-
-    function type() {
-      currentWord = words[i];
-      if (isDeleting) {
-        if (typewriterRef.current) {
-          typewriterRef.current.textContent = currentWord.substring(0, j - 1);
-        }
-        j--;
-        if (j === 0) {
-          isDeleting = false;
-          i++;
-          if (i === words.length) {
-            i = 0;
-          }
-        }
-      } else {
-        if (typewriterRef.current) {
-          typewriterRef.current.textContent = currentWord.substring(0, j + 1);
-        }
-        j++;
-        if (j === currentWord.length) {
-          isDeleting = true;
-        }
-      }
-      timeoutId = setTimeout(type, 200);
-    }
-
-    type();
-
-    return () => clearTimeout(timeoutId);
+      GsapText();
+      GsapMove();
+    const typed = new Typed(typedEl.current, {
+      strings: ['Welcome to my website!', 'I am a fullstack-developer', 'I have a passion for OOP', ' '],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+    return () => {
+      typed.destroy();
+    };
   }, []);
 
   return (
-    <>
-      <div className="h-48 flex justify-center items-center">
-        <h1 ref={typewriterRef} className="text-4xl font-bold"></h1>
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4">
+      <div className="flex-1 flex flex-col items-center md:items-start mb-10 md:mb-0">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 from-teal-300 to-blue-500 bg-gradient-to-r
+          bg-clip-text text-transparent pb-1 dark:from-red-500 dark:to-red-700">
+          <span ref={typedEl}></span>
+        </h1>
+        <p id="text" className="text-lg md:text-xl text-blue-100 max-w-md text-center 
+        shadow-blue-400 md:text-left">
+          Hi, I'm Harry McGuire, I have a passion for Object-Oriented Programming and I love creating dynamic web applications.
+        </p>
       </div>
-    </>
+      <div className="flex-1 flex justify-center">
+        <div className="relative w-64 h-64 md:w-96 md:h-96">
+          <div className="circle1 shadow-xl absolute w-24 h-24 bg-blue-200 dark:bg-red-500 rounded-full shadow-blue-400 dark:shadow-red-400 -left-8 -top-8"></div>
+          <div className="shadow-xl absolute right-0 -bottom-8 w-40 h-40 bg-blue-500 dark:bg-red-700 rounded-full shadow-blue-400 dark:shadow-red-400"></div>
+          <div className="shadow-xl absolute -top-10 left-20 w-12 h-12 bg-blue-600 dark:bg-red-800 rounded-full shadow-blue-400 dark:shadow-red-400"></div>
+          <img src={myImage} className="relative w-full h-full rounded-full shadow-md object-cover shadow-sky-300 dark:shadow-red-400" alt="Harry McGuire" />
+        </div>
+      </div>
+    </div>
   );
 }
