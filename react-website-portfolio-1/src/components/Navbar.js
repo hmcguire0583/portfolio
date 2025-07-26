@@ -37,7 +37,8 @@ function Navbar() {
     <nav className = "navbar">
         <div className = "navbar-container">
         <div className="navbar-logo" onClick={toggleDarkMode}>
-        HM <i className='fab fa-typo3' />  
+          <div className="HM">HM</div>
+          <i className="fa-solid fa-code fa-bounce ml-2" style={{ "--fa-bounce-start-scale-x": 1, "--fa-bounce-start-scale-y": 1, "--fa-bounce-jump-scale-x": 1, "--fa-bounce-jump-scale-y": 1, "--fa-bounce-land-scale-x": 1, "--fa-bounce-land-scale-y": 1, "--fa-bounce-rebound": 0, "--fa-animation-duration": "4s" }}></i>
         </div>
         <div className = 'menu-icon' onClick={handleClick}>
           <i className = {click ? 'fas fa-times' : 'fas fa-bars'} />
