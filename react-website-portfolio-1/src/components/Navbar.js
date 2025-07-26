@@ -37,7 +37,7 @@ function Navbar() {
     <nav className = "navbar">
         <div className = "navbar-container">
         <div className="navbar-logo" onClick={toggleDarkMode}>
-        HMC <i className='fab fa-typo3' />  
+        HM <i className='fab fa-typo3' />  
         </div>
         <div className = 'menu-icon' onClick={handleClick}>
           <i className = {click ? 'fas fa-times' : 'fas fa-bars'} />
