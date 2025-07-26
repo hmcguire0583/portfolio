@@ -24,10 +24,22 @@ const GsapText = () => {
     stagger: 0.05
   });
 }
+const GsapMove = () => {
+    gsap.to(".circle1", {
+    duration: 2,
+    y: 350,
+    x: -50,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true
+  });
+}
+
 export default function Home() {
   const typedEl = useRef();
   useEffect(() => {
-    GsapText();
+      GsapText();
+      GsapMove();
     const typed = new Typed(typedEl.current, {
       strings: ['Welcome to my website!', 'I am a fullstack-developer', 'I have a passion for OOP', ' '],
       typeSpeed: 50,
@@ -53,7 +65,7 @@ export default function Home() {
       </div>
       <div className="flex-1 flex justify-center">
         <div className="relative w-64 h-64 md:w-96 md:h-96">
-          <div className="shadow-xl absolute w-24 h-24 bg-blue-200 dark:bg-red-500 rounded-full shadow-blue-400 dark:shadow-red-400 -left-8 -top-8"></div>
+          <div className="circle1 shadow-xl absolute w-24 h-24 bg-blue-200 dark:bg-red-500 rounded-full shadow-blue-400 dark:shadow-red-400 -left-8 -top-8"></div>
           <div className="shadow-xl absolute right-0 -bottom-8 w-40 h-40 bg-blue-500 dark:bg-red-700 rounded-full shadow-blue-400 dark:shadow-red-400"></div>
           <div className="shadow-xl absolute -top-10 left-20 w-12 h-12 bg-blue-600 dark:bg-red-800 rounded-full shadow-blue-400 dark:shadow-red-400"></div>
           <img src={myImage} className="relative w-full h-full rounded-full shadow-md object-cover shadow-sky-300 dark:shadow-red-400" alt="Harry McGuire" />

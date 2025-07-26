@@ -11,7 +11,23 @@
   animation: gradientShift 15s ease infinite;
 }
 .dark .animated-background {
-  background: linear-gradient(45deg, #131729, rgb(8, 8, 26), rgb(0, 0, 0), #07030e);
+  background: #0b0e1d;
+  animation: none;
+  background-image: none;
+  background-size: auto;
+}
+
+.dark .gradient-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(16, 0, 34, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(27, 25, 140, 0.3) 0%, transparent 50%);
+  animation: pulseOverlay 8s ease-in-out infinite alternate;*/
 }
 
 @keyframes gradientShift {

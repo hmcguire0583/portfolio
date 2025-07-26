@@ -9,7 +9,6 @@ const logos = [
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", name: "Python" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", name: "C++" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", name: "Java" },
-  { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg", name: "Rust" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", name: "HTML5" },
   { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", name: "CSS3" },
 ];
@@ -24,9 +23,9 @@ const responsive = {
 export default function Me() {
   return (
     <>
-      <h1 className='me text-4xl font-bold text-center mt-8'>About Me</h1>
+      <h1 className='me'>About Me</h1>
 
-      <div className="max-w-6xl mx-auto mt-12 px-4">
+      <div className="max-w-6xl mx-auto mt-6 px-4">
         <Carousel
           responsive={responsive}
           infinite
@@ -38,8 +37,9 @@ export default function Me() {
           swipeable={true}
         >
           {logos.map((tech, index) => (
-            <div key={index} className="flex flex-col items-center justify-center">
-              <img src={tech.src} alt={tech.name} className="w-24 h-24 object-contain hover:scale-110 transition-transform duration-300" />
+            <div key={index} className="flex flex-col items-center justify-center p-6">
+              <img src={tech.src} alt={tech.name} className="w-24 h-24 
+              object-contain hover:scale-110 transition-transform duration-300" />
               <p className="mt-2 text-sm font-semibold text-blue-300">{tech.name}</p>
             </div>
           ))}
