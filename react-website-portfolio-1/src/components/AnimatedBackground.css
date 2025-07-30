@@ -11,10 +11,12 @@
   animation: gradientShift 15s ease infinite;
 }
 .dark .animated-background {
-  background: #0b0e1d;
+  /*background: #0b0e1d; */
   animation: none;
   background-image: none;
   background-size: auto;
+  background: linear-gradient(120deg, #0a0c2c, #1a1d49, #0f112d);
+
 }
 
 .dark .gradient-overlay {
@@ -54,6 +56,9 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   animation: float 20s infinite linear;
+  opacity: 30%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  filter: blur(1px);
 }
 
 .shape-1 {
