@@ -24,7 +24,7 @@ export default function Me() {
   return (
     <>
       <h1 className='me'>About Me</h1>
-
+      
       <div className="max-w-6xl mx-auto mt-6 px-4">
         <Carousel
           responsive={responsive}
