@@ -21,7 +21,7 @@
 }
 body {
   overflow-x: hidden; /* Prevent horizontal scroll */
-  font-family: 'Montserrat', popular, sans-serif;
+  font-family: 'Montserrat', popular, sans-serif; 
   background-color: #f0f0f0; /* Light background for contrast */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
