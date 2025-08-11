@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Navbar.css';
 import { Button } from './Button'; 
 
-function Navbar() {
+function Navbar({ scrollToTop, scrollToMe, scrollToProjects, scrollToExperience }) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -31,7 +31,7 @@ function Navbar() {
       window.removeEventListener('resize', showButton);
     };
   }, []);
-
+ 
   return (
     <>      
     <nav className = "navbar">
@@ -45,28 +45,28 @@ function Navbar() {
           </div>
           <ul className = {click ? 'nav-menu active' : 'nav-menu'}> 
             <li className = 'nav-item'>
-              <Link to="/" className = 'nav-links' onClick={closeMobileMenu}>
+              <button to="/" className = 'nav-links' onClick={() => {scrollToTop(); closeMobileMenu();}}>
                 Home
-              </Link>
+              </button>
             </li>
             <li className = 'nav-item'>
-              <Link to="/me" className = 'nav-links' onClick={closeMobileMenu}>
+              <button to="/me" className = 'nav-links' onClick={() => {scrollToMe(); closeMobileMenu();}}>
                 About Me
-              </Link>
+              </button>
             </li>
             <li className = 'nav-item'>
-              <Link to="/projects" className = 'nav-links' onClick={closeMobileMenu}>
+              <button to="/projects" className = 'nav-links' onClick={() => {scrollToProjects(); closeMobileMenu();}}>
                 Projects
-              </Link>
+              </button>
             </li>
             <li className = 'nav-item'>
-              <Link to="/experience" className = 'nav-links' onClick={closeMobileMenu}>
+              <button to="/experience" className = 'nav-links' onClick={() => {scrollToExperience(); closeMobileMenu();}}>
                 Experience
-              </Link>
+              </button>
             </li>
             <li className = 'nav-item'>
               <Link to="/contact" className = 'nav-links-mobile' onClick={closeMobileMenu}>
-                Contact 
+                Contact
               </Link>
             </li>
           </ul>
