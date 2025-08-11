@@ -117,8 +117,22 @@ export default function HeroSection() {
       backSpeed: 25,
       loop: true
     });
+    const enableGitHubClick = setTimeout(() => {
+    const githubIcon = document.querySelector(".github-icon");
+    if (githubIcon) {
+      githubIcon.classList.add("active");
+    }
+  }, 5300); 
+    const enableLinkedInClick = setTimeout(() => {
+    const linkedinIcon = document.querySelector(".linkedin-icon");
+    if (linkedinIcon) {
+      linkedinIcon.classList.add("active");
+    }
+  }, 10150); 
     return () => {
       typed.destroy();
+      clearTimeout(enableGitHubClick);
+      clearTimeout(enableLinkedInClick);
     };
   }, []);
 
@@ -146,7 +160,7 @@ export default function HeroSection() {
           rel="noopener noreferrer"
           >
           <i
-            className="fa-brands fa-github fade-flip  
+            className="fa-brands fa-github github-icon fade-flip  
             text-5xl absolute top-[-8px] left-[-7px] text-blue-900 dark:text-black"
           ></i>
           </a>
@@ -155,7 +169,8 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fad fa-brands fa-linkedin-in ml-3 text-3xl rounded-full text-blue-500 fade-shake
+            <i className="fad fa-brands fa-linkedin-in ml-3 text-3xl linkedin-icon
+              rounded-full text-blue-500 fade-shake
               bg-[#003153] dark:bg-black w-12 h-12 flex items-center justify-center dark:text-red-700
               absolute right-8 bottom-[-12px]"
             ></i>

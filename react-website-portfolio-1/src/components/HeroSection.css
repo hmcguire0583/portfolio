@@ -19,6 +19,22 @@
 
 }
 
+.github-icon {
+  pointer-events: none;
+}
+
+.github-icon.active {
+  pointer-events: auto;
+}
+
+.linkedin-icon {
+  pointer-events: none;
+}
+
+.linkedin-icon.active {
+  pointer-events: auto;
+}
+
 .fade-flip {
   animation-name: fade-flip;
   opacity: 0;
