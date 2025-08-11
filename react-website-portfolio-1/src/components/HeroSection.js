@@ -7,6 +7,7 @@ import './HeroSection.css';
 import Typed from 'typed.js';
 import myImage from '../images/IMG_2825.jpeg'; 
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { Button } from './Button';
 
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(SplitText);
@@ -139,14 +140,26 @@ export default function HeroSection() {
           <div className="circle2 shadow-xl absolute right-0 -bottom-8 w-40 h-40 bg-blue-500 dark:bg-red-700 rounded-full shadow-blue-400 dark:shadow-red-400"></div>
           <div className="circle3 shadow-xl absolute -top-10 left-20 w-12 h-12 bg-blue-600 dark:bg-red-800 rounded-full shadow-blue-400 dark:shadow-red-400"></div>
           <img src={myImage} className="relative w-full h-full rounded-full shadow-md object-cover shadow-sky-300 dark:shadow-red-400" alt="Harry McGuire" />
+          <a
+          href="https://github.com/hmcguire0583"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
           <i
             className="fa-brands fa-github fade-flip  
             text-5xl absolute top-[-8px] left-[-7px] text-blue-900 dark:text-black"
           ></i>
-          <i className="fad fa-brands fa-linkedin-in ml-3 text-3xl rounded-full text-blue-500 fade-shake
-            bg-[#003153] dark:bg-black w-12 h-12 flex items-center justify-center dark:text-red-700
-            absolute right-8 bottom-[-12px]"
-          ></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/harry-mcguire-0595bb301"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fad fa-brands fa-linkedin-in ml-3 text-3xl rounded-full text-blue-500 fade-shake
+              bg-[#003153] dark:bg-black w-12 h-12 flex items-center justify-center dark:text-red-700
+              absolute right-8 bottom-[-12px]"
+            ></i>
+          </a>
         </div>
       </div>
     </div>
