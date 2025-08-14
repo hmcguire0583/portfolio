@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import HeroSection from '../HeroSection';
+import HeroSection from './UI/HeroSection';
 import Me from './Me';
 import Projects from './Projects';
 import Experience from './Experience';

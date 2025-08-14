@@ -1,14 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import SplitText from "gsap/SplitText";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import '../App.css';
+import '../../../App.css';
 import './HeroSection.css';
 import Typed from 'typed.js';
-import myImage from '../images/IMG_2825.jpeg'; 
+import myImage from '../../../images/IMG_2825.jpeg'; 
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { Button } from './Button';
-
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(SplitText);
 const GsapText = () => {
