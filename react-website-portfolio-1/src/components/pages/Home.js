@@ -11,7 +11,7 @@ export default function Home({ meRef, projectsRef, experienceRef }) {
       <HeroSection />
       <div ref={meRef}><Me /></div>
       <div ref={projectsRef}><Projects /></div>
-      <div ref={experienceRef}><Experience /></div>
+      <div ref={experienceRef}><Experience /></div>/
     </>
   );
 }

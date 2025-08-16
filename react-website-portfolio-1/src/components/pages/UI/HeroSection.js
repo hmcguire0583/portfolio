@@ -142,7 +142,7 @@ export default function HeroSection() {
         </h1>
         <p id="text" className="text-lg md:text-xl text-blue-100 max-w-md text-center 
         shadow-blue-400 md:text-left">
-          Hi, I'm Harry McGuire, I have a passion for Object-Oriented Programming and I love creating dynamic web applications.
+          Hi, I'm Harry McGuire, I have a passion for Object-Oriented Programming and I am learning full-stack development.
         </p>
       </div>
       <div className="flex-1 flex justify-center">
