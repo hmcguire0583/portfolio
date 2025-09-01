@@ -1,4 +1,4 @@
 Basic React Portfolio
 
---> trying to expand to NEXT.JS
---> Currently working on Navbar Menu for Mobile
+--> trying to expand to NEXT.JS (probably not anymore lol)
+--> Currently working on Navbar Menu for Mobile (still)
